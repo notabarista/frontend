@@ -1,0 +1,35 @@
+<h1>
+  Welcome back <br />
+  <span style="color: red; font-weight: bolder"> Log in</span>
+</h1>
+<h2 class="alert alert-danger p-2" *ngIf="errorMessage">{{ errorMessage }}</h2>
+<div>
+  <form>
+    <input
+      type="text"
+      name="username"
+      autocomplete="username"
+      placeholder="email"
+      class="form-control"
+      required
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+      value="gunjan.mtbpaul@gmail.com"
+      [(ngModel)]="user.emailId"
+    />
+    <br />
+    <input
+      type="password"
+      name="password"
+      class="form-control"
+      placeholder="password"
+      required
+      autocomplete="new-password"
+      value="abc"
+      [(ngModel)]="user.password"
+    />
+    <br />
+  </form>
+  <button class="btn btn-primary" (click)="handleLogin()">Log in</button>
+</div>
+
+<small>Not registered? <a routerLink="/signin">sign in</a> </small>

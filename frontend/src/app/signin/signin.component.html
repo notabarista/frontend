@@ -1,0 +1,47 @@
+<p class="alert alert-warning" *ngIf="errorMessage">{{ errorMessage }}</p>
+<h1>Sign in</h1>
+
+<form>
+  <input
+    type="text"
+    name="name"
+    required
+    [(ngModel)]="user.name"
+    placeholder="name"
+    class="form-control"
+  />
+  <br />
+
+  <input
+    type="email"
+    name="email"
+    required
+    [(ngModel)]="user.emailId"
+    class="form-control"
+    placeholder="email"
+  />
+  <br />
+
+  <input
+    type="text"
+    name="username"
+    autocomplete="username"
+    class="form-control"
+    required
+    placeholder="username"
+    [(ngModel)]="user.username"
+  /><br />
+  <input
+    type="password"
+    name="password"
+    class="form-control"
+    required
+    autocomplete="new-password"
+    placeholder="password (use more than 6 letter/charecters)"
+    [(ngModel)]="user.password"
+  /><br />
+</form>
+
+<button class="btn btn-primary" (click)="handleSign()">Sign in</button>
+
+<p>Already have a account? <a routerLink="/login">Log in</a></p>
