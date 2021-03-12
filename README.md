@@ -1,4 +1,16 @@
-# FeNotabarista
+# Notabarista frontend app
+
+Steps to get this app running locally:
+1. Install Node.js (check the official docs for details https://angular.io/guide/setup-local)
+2. Install the Angular CLI via the terminal window: **npm install -g @angular/cli**
+4. Clone this repository with your Git client of choice (Github desktop for example).
+5. Open a terminal window, navigate to the root of the cloned project and run: **npm install**
+6. In the same terminal window and location (root of the cloned project) run the following command: **ng serve --open**
+7. Check the default Angular instructions below for more details.
+
+Download you IDE of choice to start working on the project (for example Visual Studio Code).
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
 
