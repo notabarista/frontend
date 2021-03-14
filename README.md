@@ -12,7 +12,10 @@ Steps to get this app to run locally:
 9. The browser will open automaticall a window to `http://localhost:4200/`. This is the Angular dev server.
 10. Download you IDE of choice to start working on the project (for example Visual Studio Code). The app will automatically reload if you change any of the source files and the Angular dev server is running (number 7 executed above).
 
-**Important note:** while using the Angular dev server (port 4200) you cannot use the login/register flow as the backend is on another port and Okta does not accept different ports. The workaround for this is to open a new tab and login separately in the the main backend microservice at `http://localhost:18080/authenticate` which will redirect you to the compiled Angular version. In the compiled version the entire login/register without any issues.
+**Important note:** while using the Angular dev server (port 4200) you cannot use the login/register flow as the backend is on another port and Okta does not accept different ports.\
+The workaround for this is to open a new tab and login separately in the the main backend microservice at `http://localhost:18080/authenticate` which will redirect you to the compiled Angular version.\
+Refresh the app in the dev server tab and the backend requests should be authenticated.\
+In the compiled version the entire login/register without any issues.
 
 ## Setting up the backend services locally:
 - TBD either manual setup of all microservices or via bat files
