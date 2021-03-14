@@ -26,6 +26,7 @@ In the compiled version the entire login/register without any issues.
 - this will compile the production version (faster than the dev/debug version)
 - you can also skip `--prod` to compile a debuggable version - see official docs for details
 - copy the compiled files from the <project root path>/`dist` to the location of the main service resources (TBD location based on local deployment type)
+- restart the backend main service
 
 --- 
 **Original Angular generated readme**
