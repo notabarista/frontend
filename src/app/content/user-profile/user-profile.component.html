@@ -1,5 +1,39 @@
 <form [formGroup]="userProfileForm" novalidate>
     <div class="form-group">
+        <label class="center-block">Username:
+            <input class="form-control" formControlName="username">
+        </label>
+    </div>
+    <div *ngIf="userProfileForm.controls['username'].invalid && (userProfileForm.controls['username'].dirty || userProfileForm.controls['username'].touched)"
+        class="alert alert-danger">
+        <div *ngIf="userProfileForm.controls['username'].errors?.required || userProfileForm.controls['username'].errors?.pattern">
+            A valid username is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="center-block">First Name:
+            <input class="form-control" formControlName="firstName">
+        </label>
+    </div>
+    <div *ngIf="userProfileForm.controls['firstName'].invalid && (userProfileForm.controls['firstName'].dirty || userProfileForm.controls['firstName'].touched)"
+        class="alert alert-danger">
+        <div *ngIf="userProfileForm.controls['firstName'].errors?.required || userProfileForm.controls['firstName'].errors?.pattern">
+            A valid first name is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="center-block">Last Name:
+            <input class="form-control" formControlName="lastName">
+        </label>
+    </div>
+    <div *ngIf="userProfileForm.controls['lastName'].invalid && (userProfileForm.controls['lastName'].dirty || userProfileForm.controls['lastName'].touched)"
+        class="alert alert-danger">
+        <div *ngIf="userProfileForm.controls['lastName'].errors?.required || userProfileForm.controls['lastName'].errors?.pattern">
+            A valid last name is required.
+        </div>
+    </div>
+
+    <div class="form-group">
         <label class="center-block">Phone Number:
             <input class="form-control" formControlName="phoneNumber">
         </label>
@@ -27,6 +61,4 @@
 
 <br><br>
 
-<button (click)="showUserInfo()">Get user info</button>
-
-<div [innerHTML]="userInfo"></div>
+<span>To be completed...</span>

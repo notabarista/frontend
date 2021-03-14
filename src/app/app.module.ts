@@ -14,6 +14,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ProgressSpinnerDialogComponent } from './widgets/progress-spinner-dialog/progress-spinner-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { MatButtonModule } from '@angular/material/button';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    ProgressSpinnerDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    MatDialogModule
   ],
   providers: [
     {

@@ -4,3 +4,12 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.transparent .mat-dialog-container {
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #212121;
+}
