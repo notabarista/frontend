@@ -35,6 +35,7 @@ In the compiled version the entire login/register without any issues.
   -- backend redirects the browser to the Okta login page\
   -- after a successful login the user is redirected to the original path in the UI app
 - automatically adds the current UI URL route to the backend request so that the user gets redirected to the same route after signing in
+
 **2. Proxy config for dev server:**
 - see 'proxy.config.js' and the oficial [Angular guide](https://angular.io/guide/build#proxying-to-a-backend-server) for more details
 - adds all backend relative paths that need to be redirected from the Angular dev server port (4200) to the backend microservices port (18080 as of now)
