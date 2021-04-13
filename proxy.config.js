@@ -3,7 +3,8 @@ const PROXY_CONFIG = [
         context: [
             // add all backend relative paths in here
             "/user-management",
-            "/authenticate"
+            "/authenticate",
+            "/catalog-service"
         ],
         target: "http://localhost:18080",
         secure: false,

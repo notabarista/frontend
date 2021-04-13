@@ -12,4 +12,8 @@ export class ApiService {
     return this.httpClient.get('/user-management/user/current');
   }
 
+  getItems(page: number, size: number) {
+    return this.httpClient.get('/catalog-service/item/findAll?page=' + page + '&size=' + size);
+  }
+
 }
