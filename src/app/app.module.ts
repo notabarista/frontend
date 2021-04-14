@@ -19,6 +19,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ProgressSpinnerDialogComponent } from './widgets/progress-spinner-dialog/progress-spinner-dialog.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { MatListModule } from '@angular/material/list';
     MatProgressSpinnerModule,
     MatDialogModule,
     MatGridListModule,
-    MatListModule
+    MatListModule,
+    MatChipsModule
   ],
   providers: [
     {
