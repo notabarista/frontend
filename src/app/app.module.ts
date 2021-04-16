@@ -17,6 +17,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ProgressSpinnerDialogComponent } from './widgets/progress-spinner-dialog/progress-spinner-dialog.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { ProgressSpinnerDialogComponent } from './widgets/progress-spinner-dialo
     MatIconModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatGridListModule,
+    MatListModule,
+    MatChipsModule
   ],
   providers: [
     {
