@@ -1,64 +1,8 @@
-<form [formGroup]="userProfileForm" novalidate>
-    <div class="form-group">
-        <label class="center-block">Username:
-            <input class="form-control" formControlName="username">
-        </label>
-    </div>
-    <div *ngIf="userProfileForm.controls['username'].invalid && (userProfileForm.controls['username'].dirty || userProfileForm.controls['username'].touched)"
-        class="alert alert-danger">
-        <div *ngIf="userProfileForm.controls['username'].errors?.required || userProfileForm.controls['username'].errors?.pattern">
-            A valid username is required.
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="center-block">First Name:
-            <input class="form-control" formControlName="firstName">
-        </label>
-    </div>
-    <div *ngIf="userProfileForm.controls['firstName'].invalid && (userProfileForm.controls['firstName'].dirty || userProfileForm.controls['firstName'].touched)"
-        class="alert alert-danger">
-        <div *ngIf="userProfileForm.controls['firstName'].errors?.required || userProfileForm.controls['firstName'].errors?.pattern">
-            A valid first name is required.
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="center-block">Last Name:
-            <input class="form-control" formControlName="lastName">
-        </label>
-    </div>
-    <div *ngIf="userProfileForm.controls['lastName'].invalid && (userProfileForm.controls['lastName'].dirty || userProfileForm.controls['lastName'].touched)"
-        class="alert alert-danger">
-        <div *ngIf="userProfileForm.controls['lastName'].errors?.required || userProfileForm.controls['lastName'].errors?.pattern">
-            A valid last name is required.
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="center-block">Phone Number:
-            <input class="form-control" formControlName="phoneNumber">
-        </label>
-    </div>
-    <div *ngIf="userProfileForm.controls['phoneNumber'].invalid && (userProfileForm.controls['phoneNumber'].dirty || userProfileForm.controls['phoneNumber'].touched)"
-        class="alert alert-danger">
-        <div *ngIf="userProfileForm.controls['phoneNumber'].errors?.required || userProfileForm.controls['phoneNumber'].errors?.pattern">
-            A valid phone number is required.
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="center-block">Avatar URL:
-            <input class="form-control" formControlName="avatarURL">
-        </label>
-    </div>
-    <div *ngIf="userProfileForm.controls['avatarURL'].invalid && (userProfileForm.controls['avatarURL'].dirty || userProfileForm.controls['avatarURL'].touched)"
-        class="alert alert-danger">
-        <div *ngIf="userProfileForm.controls['avatarURL'].errors?.required">
-            A valid avatar url is required.
-        </div>
-    </div>
-
-    <button type="submit" class="btn btn-default" [disabled]="userProfileForm.invalid">Submit</button>
-</form>
-
-<br><br>
-
-<span>To be completed...</span>
+<mat-tab-group>
+    <mat-tab label="Personal Info">
+        <app-personal-info></app-personal-info>
+    </mat-tab>
+    <mat-tab label="Addresses">TBD</mat-tab>
+    <mat-tab label="Orders">TBD</mat-tab>
+    <mat-tab label="Wishlist">TBD</mat-tab>
+</mat-tab-group>
