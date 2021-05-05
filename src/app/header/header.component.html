@@ -1,7 +1,24 @@
-<mat-toolbar color="secondary">
-  <a class="header-link" routerLink="/" routerLinkActive="active">I'M NOT A BARISTA</a>
+<mat-toolbar color="secondary" class="header-toolbar">
+  <a class="header-link" routerLink="/" routerLinkActive="active"><img src="/notabarista.png"> I'M NOT A BARISTA</a>
+  <form class="search-form">
+    <mat-form-field class="search-field">
+      <mat-label>Search</mat-label>
+      <input type="text" matInput [formControl]="searchControl"
+        [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelectionChanged($event)">
+        <mat-option *ngIf="isLoading" class="is-loading"><mat-spinner diameter="50"></mat-spinner></mat-option>
+        <ng-container *ngIf="!isLoading">
+          <mat-option *ngFor="let searchResult of searchResults" [value]="searchResult">
+            <span>{{ searchResult.name }}</span>
+          </mat-option>
+        </ng-container>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+
   <span class="header-spacer"></span>
-  <button mat-icon-button aria-label="Example icon-button with share icon">
+
+  <button mat-icon-button aria-label="Example icon-button with share icon" matTooltip="My Account">
     <mat-icon routerLink="/user-profile" aria-hidden="false">account_circle</mat-icon>
   </button>
 </mat-toolbar>

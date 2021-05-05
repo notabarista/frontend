@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ApiService } from 'src/api/api.service';
 import { ProgressSpinnerDialogComponent } from '../widgets/progress-spinner-dialog/progress-spinner-dialog.component';
@@ -6,7 +6,8 @@ import { ProgressSpinnerDialogComponent } from '../widgets/progress-spinner-dial
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss']
+  styleUrls: ['./content.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ContentComponent implements OnInit {
 

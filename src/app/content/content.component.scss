@@ -1,9 +1,9 @@
 .content {
-    padding: 10px;
+    padding: 0px;
 }
 
-.item-info {
-    color: black;
+.mat-list-item {
+    color: black !important;
 }
 
 .item-list .mat-list-item {
@@ -13,4 +13,13 @@
 .item-photo {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 25px;
+}
+
+.item-widget {
+    cursor: pointer;
+}
+
+.mat-tab-label {
+    color: black;
 }

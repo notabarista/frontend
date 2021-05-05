@@ -20,6 +20,13 @@ import { ProgressSpinnerDialogComponent } from './widgets/progress-spinner-dialo
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ItemComponent } from './content/item/item.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { PersonalInfoComponent } from './content/user-profile/personal-info/personal-info.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,9 @@ import { MatChipsModule } from '@angular/material/chips';
     FooterComponent,
     ContentComponent,
     UserProfileComponent,
-    ProgressSpinnerDialogComponent
+    ProgressSpinnerDialogComponent,
+    ItemComponent,
+    PersonalInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +52,12 @@ import { MatChipsModule } from '@angular/material/chips';
     MatDialogModule,
     MatGridListModule,
     MatListModule,
-    MatChipsModule
+    MatChipsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTabsModule,
+    MatTooltipModule
   ],
   providers: [
     {
