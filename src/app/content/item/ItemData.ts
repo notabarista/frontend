@@ -1,43 +1,59 @@
+let numberOfStars:number = 5;
+
 export class ItemBasicData 
 {
-    id!: number;
+    constructor(id_:number)
+    {
+        this.reviewRatingCounts = new Array<number>(numberOfStars);
+        this._id = id_;
+    }
 
-    name!: string ;
-    mediaUri!: string;
+    protected _id!: number;
 
-    price!: number;
+    name!: string;
+    imageUrl!: string;
+
+    price!: string;
+
+    public get id()
+    {
+        return this._id;
+    }
 
     ratingAverage!: number;
-    numberOfRatings!: number;
+    reviewRatingCounts!:number[]; 
 
 }
 
 export class ItemData extends ItemBasicData
 {
+    constructor(id_:number)
+    {
+        super(id_);
+    }
 
     code! : string;
     labels!: string[];
 
-    inStock!: boolean;
+    vendor!: string[];
 
-    //************TBD*******
-    mediaListUri!: string[];
-    details! : string;
+    isActive!: boolean;
+    mediaListUrl!: string[];
 
-    specifications!: string;
-    //**********TBD**********/
-
+    description! : string;
     listReviews!: ReviewItemData[];
 }
 
 class ReviewItemData
 {
     username!: string;
-    profileImgUri!: string;
+    profileImgUrl!: string;
 
     rating! :number;
     date! :Date;
 
     title!: string;
     message!: string;
+
+    likes!:number;
 }
