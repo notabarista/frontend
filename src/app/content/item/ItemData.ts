@@ -4,56 +4,62 @@ export class ItemBasicData
 {
     constructor(id_:number)
     {
-        this.reviewRatingCounts = new Array<number>(numberOfStars);
+        this.reviewRatingCounts = new Array<ReviewRatingCount>(numberOfStars);
+
         this._id = id_;
     }
-
-    protected _id!: number;
 
     name!: string;
     imageUrl!: string;
 
     price!: string;
 
+    ratingAverage!: number;
+    reviewRatingCounts!: ReviewRatingCount[];
+
+    private _id!: number;
+
     public get id()
     {
         return this._id;
     }
-
-    ratingAverage!: number;
-    reviewRatingCounts!:number[]; 
-
 }
 
 export class ItemData extends ItemBasicData
 {
-    constructor(id_:number)
+    constructor(id_:number,sellerID_:number)
     {
         super(id_);
+
+        this._sellerID = sellerID_;
     }
+
+    private _sellerID!: number;
+
+    createdAt!:Date;
+    modifiedAt!:Date;
+
+    version!:number;
+
+    createdBy!: string;
+    modifiedBy!: number;
 
     code! : string;
     labels!: string[];
 
-    vendor!: string[];
-
-    isActive!: boolean;
+    status!: string;
     mediaListUrl!: string[];
 
     description! : string;
-    listReviews!: ReviewItemData[];
+
+    public get sellerID()
+    {
+        return this._sellerID;
+    }
 }
 
-class ReviewItemData
+class ReviewRatingCount
 {
-    username!: string;
-    profileImgUrl!: string;
-
-    rating! :number;
-    date! :Date;
-
-    title!: string;
-    message!: string;
-
-    likes!:number;
+    starRatingLevel!:number;
+    reviewCount!:number;
 }
