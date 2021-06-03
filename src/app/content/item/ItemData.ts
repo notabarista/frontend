@@ -6,7 +6,7 @@ export class ItemBasicData
     {
         this.reviewRatingCounts = new Array<ReviewRatingCount>(numberOfStars);
 
-        this._id = id_;
+        this.id = id_;
     }
 
     name!: string;
@@ -17,12 +17,7 @@ export class ItemBasicData
     ratingAverage!: number;
     reviewRatingCounts!: ReviewRatingCount[];
 
-    private _id!: number;
-
-    public get id()
-    {
-        return this._id;
-    }
+    readonly id!: number;
 }
 
 export class ItemData extends ItemBasicData
@@ -31,10 +26,10 @@ export class ItemData extends ItemBasicData
     {
         super(id_);
 
-        this._sellerID = sellerID_;
+        this.sellerID = sellerID_;
     }
 
-    private _sellerID!: number;
+    readonly sellerID!: number;
 
     createdAt!:Date;
     modifiedAt!:Date;
@@ -51,11 +46,6 @@ export class ItemData extends ItemBasicData
     mediaListUrl!: string[];
 
     description! : string;
-
-    public get sellerID()
-    {
-        return this._sellerID;
-    }
 }
 
 class ReviewRatingCount
