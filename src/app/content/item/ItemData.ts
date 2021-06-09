@@ -43,7 +43,7 @@ export class ItemData extends ItemBasicData
     labels!: string[];
 
     status!: string;
-    media!: string[];
+    mediaUrls!: string[];
 
     description! : string;
 }
