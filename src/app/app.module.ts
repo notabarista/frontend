@@ -23,10 +23,11 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { ItemComponent } from './content/item/item.component';
+import { ItemOverviewComponent } from './content/item-overview/item-overview.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { PersonalInfoComponent } from './content/user-profile/personal-info/personal-info.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ItemComponent } from './content/item/item.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +37,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     ContentComponent,
     UserProfileComponent,
     ProgressSpinnerDialogComponent,
-    ItemComponent,
-    PersonalInfoComponent
+    ItemOverviewComponent,
+    PersonalInfoComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
