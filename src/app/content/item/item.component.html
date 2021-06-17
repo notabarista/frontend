@@ -1,5 +1,16 @@
-<div class="box box-default">
-    <code>
-        <pre>{{ itemDetails | json }}</pre>
-    </code>
-</div>
+<mat-grid-list cols="4" rowHeight="4:4">
+  <mat-grid-tile *ngFor="let item of items">
+    <mat-list class="item-list" routerLink="/item/{{ item.id }}" class="item-widget">
+      <mat-list-item class="item-info"><b>{{ item.name }}</b></mat-list-item>
+      <mat-list-item><img class="item-photo" src='{{ item.photos[0] }}' /></mat-list-item>
+      <mat-list-item class="item-info">Rating: {{ item.avgRating }}/5 ({{ item.nrOfRatings }})</mat-list-item>
+      <mat-list-item class="item-info">
+        <mat-chip-list>
+          <mat-chip disabled *ngFor="let label of item.labels">
+            {{ label.key ? label.key + ' : ' : '' }}{{ label.value }}
+          </mat-chip>
+        </mat-chip-list>
+      </mat-list-item>
+    </mat-list>
+  </mat-grid-tile>
+</mat-grid-list>

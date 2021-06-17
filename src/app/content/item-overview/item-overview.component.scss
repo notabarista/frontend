@@ -1,0 +1,12 @@
+::ng-deep{
+    .mat-tab-label .mat-tab-label-content{
+      color: #212121;
+    }
+    .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+      border-color: black;
+    }
+    .mat-tab-body-content{
+      padding: 2em;
+    }
+  }
+  

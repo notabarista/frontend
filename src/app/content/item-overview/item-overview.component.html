@@ -1,0 +1,42 @@
+<div class="box box-default">
+    <div>Title: {{itemDetails.name}}</div>
+    <div>ID: {{itemDetails.id}}</div>
+  
+    <ng-container *ngFor=" let label of itemDetails.labels">
+      <span>{{label.key}}    </span>
+      <span>{{label.value}}    </span>
+      <span>{{label.order}}    </span>
+    </ng-container>
+  
+    <div>
+      <span style="padding-right: 1rem">Rating: {{itemDetails.avgRating}}</span>
+      <span style="padding-right: 1rem">Reviews: {{itemDetails.nrOfRatings}}</span>
+      <span *ngIf="itemDetails.price && itemDetails.price !== null; else noprice"> Price: {{itemDetails.price}}</span>
+      <ng-template #noprice><h2 style="display: inline-flex">no price defined!</h2></ng-template>
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-between;max-width: 30%">
+      <span class="narges">Sold by: {{itemDetails.seller.name}}</span>
+      <span *ngIf="itemDetails.status && itemDetails.status === 'ACTIVE'; else notActive"><span> <label style="background-color: navy; color: #FFFFFF; padding:.5em 1em ">In Stock</label></span></span>
+      <ng-template #notActive><span> <label style="background-color: tomato; color: #FFFFFF; padding:.5em 1em ">not available</label></span></ng-template>
+    </div>
+  
+    <mat-tab-group style="width: 30%;max-width: 30%; min-height: 300px; max-height: 300px; overflow: auto;border: 1px solid black">
+      <mat-tab label="Description">
+        <ul>
+          <li>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Nunc Non Elit Mi. Curabitur Finibus Nunc Ut Odio Tincidunt Sollicitudin. Nullam Bibendum, Mi Nec Fermentum Suscipit, Purus Ante</li>
+          <li>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Nunc Non Elit Mi. Curabitur Finibus Nunc Ut Odio Tincidunt Sollicitudin. Nullam Bibendum, Mi Nec Fermentum Suscipit, Purus Ante</li>
+          <li>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Nunc Non Elit Mi. Curabitur Finibus Nunc Ut Odio Tincidunt Sollicitudin. Nullam Bibendum, Mi Nec Fermentum Suscipit, Purus Ante</li>
+          <li>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Nunc Non Elit Mi. Curabitur Finibus Nunc Ut Odio Tincidunt Sollicitudin. Nullam Bibendum, Mi Nec Fermentum Suscipit, Purus Ante</li>
+        </ul>
+      </mat-tab>
+      <mat-tab label="Details"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae consectetur nisi. Mauris vitae sapien sit amet leo volutpat lacinia. Sed tortor eros, suscipit ac facilisis ut, vulputate sed tortor. Nulla laoreet metus vestibulum lorem volutpat, nec vestibulum arcu consequat. Aenean nec arcu nibh. Phasellus turpis augue, pretium a posuere tincidunt, eleifend et orci. Etiam in odio lacus. Proin tempor lobortis mattis. Suspendisse ac elit lacus. Pellentesque posuere nulla nibh, vitae bibendum massa dignissim et. Phasellus vitae sodales eros. Phasellus sagittis tincidunt tellus, ac hendrerit mi viverra a.
+  
+        Etiam pharetra nunc tortor, non finibus turpis malesuada sit amet. Cras nisl enim, volutpat vitae nisl sed, cursus suscipit ex. In hac habitasse platea dictumst. Cras urna dolor, faucibus eu urna at, posuere sagittis sem. Duis volutpat ipsum quam, a convallis metus faucibus et. Proin eu mauris metus. Vivamus at velit suscipit ipsum pellentesque ullamcorper. Maecenas ac massa a risus viverra tempor vitae ac dolor. Proin maximus lacinia enim dapibus volutpat. Pellentesque mattis sagittis neque in lacinia. In nisl odio, aliquam at interdum eu, viverra at ipsum. Duis consectetur nibh vitae consequat imperdiet. Suspendisse commodo, justo ut accumsan bibendum, odio est porttitor dolor, vitae tincidunt turpis libero eget quam. Vivamus aliquet laoreet risus bibendum molestie.</mat-tab>
+      <mat-tab label="Specifications"> Content 3 </mat-tab>
+    </mat-tab-group>
+  
+   <!-- <code>
+   <pre>{{ itemDetails | json }}</pre>
+  </code> -->
+  </div>
+  
