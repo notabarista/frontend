@@ -28,7 +28,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { PersonalInfoComponent } from './content/user-profile/personal-info/personal-info.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
 
 @NgModule({
   declarations: [
@@ -39,7 +38,7 @@ import { reducers, metaReducers } from './reducers';
     UserProfileComponent,
     ProgressSpinnerDialogComponent,
     ItemComponent,
-    PersonalInfoComponent
+    PersonalInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,17 +59,15 @@ import { reducers, metaReducers } from './reducers';
     MatInputModule,
     MatTabsModule,
     MatTooltipModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers
-    })
+    StoreModule.forRoot({}, {}),
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
-      multi: true
-    }
+      multi: true,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
