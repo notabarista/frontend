@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ItemOverviewComponent } from './item-overview/item-overview.component';
 
-
-// import { ItemOverview } from './item-overview/';
+import { ItemOverview } from './item-overview/item-overview.component';
 
 const itemRoutes: Routes = [
-//   { path: '', component: ItemOverview }
+  { path: '', component: ItemOverview }
 ];
 
 @NgModule({
@@ -14,7 +12,6 @@ const itemRoutes: Routes = [
     RouterModule.forChild(itemRoutes)
   ],
   declarations: [
-    // ItemOverview,
-  ItemOverviewComponent]
+    ItemOverview,]
 })
 export class ItemModule { }
