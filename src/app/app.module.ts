@@ -28,6 +28,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { PersonalInfoComponent } from './content/user-profile/personal-info/personal-info.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,11 @@ import { StoreModule } from '@ngrx/store';
     MatTabsModule,
     MatTooltipModule,
     StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({
+      name: 'NotaBarista Frontend',
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
   ],
   providers: [
     {
