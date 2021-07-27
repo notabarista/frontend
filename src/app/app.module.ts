@@ -27,6 +27,7 @@ import { ItemComponent } from './content/item/item.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { PersonalInfoComponent } from './content/user-profile/personal-info/personal-info.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+
 import { StoreModule } from '@ngrx/store';
 
 @NgModule({
@@ -59,6 +60,7 @@ import { StoreModule } from '@ngrx/store';
     MatInputModule,
     MatTabsModule,
     MatTooltipModule,
+    
     StoreModule.forRoot({}, {})
   ],
   providers: [
