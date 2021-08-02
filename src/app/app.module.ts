@@ -27,6 +27,9 @@ import { ItemComponent } from './content/item/item.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { PersonalInfoComponent } from './content/user-profile/personal-info/personal-info.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     UserProfileComponent,
     ProgressSpinnerDialogComponent,
     ItemComponent,
-    PersonalInfoComponent
+    PersonalInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,15 +60,21 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatFormFieldModule,
     MatInputModule,
     MatTabsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({
+      name: 'NotaBarista Frontend',
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
-      multi: true
-    }
+      multi: true,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
