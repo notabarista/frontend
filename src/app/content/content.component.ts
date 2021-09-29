@@ -25,8 +25,8 @@ export class ContentComponent implements OnInit {
 
   getItems(page: number, size: number) {
     this.apiService.getItems(page, size)
-      .subscribe((data: any) => {
-        this.items = data.content;
+      .subscribe((response: any) => {
+        this.items = response.data;
 
         this.hideSpinner();
       });

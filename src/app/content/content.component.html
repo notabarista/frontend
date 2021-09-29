@@ -5,7 +5,7 @@
                 <mat-grid-tile *ngFor="let item of items">
                     <mat-list class="item-list" routerLink="/item/{{ item.id }}" class="item-widget">
                         <mat-list-item class="item-info"><b>{{ item.name }}</b></mat-list-item>
-                        <mat-list-item><img class="item-photo" src='{{ item.photos[0] }}' /></mat-list-item>
+                        <mat-list-item><img class="item-photo" src='{{ item.mediaUrls[0] }}' /></mat-list-item>
                         <mat-list-item class="item-info">Rating: {{ item.avgRating }}/5 ({{ item.nrOfRatings }})</mat-list-item>
                         <mat-list-item class="item-info">
                             <mat-chip-list>
